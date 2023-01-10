@@ -19,7 +19,7 @@ class LandingPage extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontWeight: FontWeight.w900,
-            fontSize: 100,
+            fontSize: 40,
           ),
         ),
       ),
