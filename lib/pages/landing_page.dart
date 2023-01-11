@@ -18,7 +18,7 @@ class LandingPage extends StatelessWidget {
           'Search for Speed',
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontWeight: FontWeight.w900,
+            fontWeight: FontWeight.bold,
             fontSize: 40,
           ),
         ),
@@ -38,18 +38,19 @@ class LandingPage extends StatelessWidget {
       ),
     ];
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              width: 320,
-              child: Column(
-                children: items,
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 320,
+                child: items[index],
               ),
-            ),
-          ],
-        ),
+            ],
+          );
+        },
       ),
     );
   }
