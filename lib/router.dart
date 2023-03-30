@@ -24,12 +24,12 @@ final router = GoRouter(
           const NoTransitionPage(child: LandingPage())),
     ),
     GoRoute(
-      path: '/privacy_policy',
+      path: PrivacyPolicyPage.route,
       pageBuilder: ((context, state) =>
           const NoTransitionPage(child: PrivacyPolicyPage())),
     ),
     GoRoute(
-      path: '/terms_of_service',
+      path: TermsOfServicePage.route,
       pageBuilder: ((context, state) =>
           const NoTransitionPage(child: TermsOfServicePage())),
     ),

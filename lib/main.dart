@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'firebase_options.dart';
 import 'router.dart';
@@ -25,7 +26,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: ThemeData(
-        fontFamily: 'NotoSansJP',
+        textTheme: GoogleFonts.sawarabiGothicTextTheme(),
+        primaryColor: Colors.black,
+        colorScheme: Theme.of(context).colorScheme.copyWith(
+              primary: Colors.black,
+              secondary: Colors.black,
+            ),
       ),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
@@ -37,9 +43,7 @@ class MyApp extends StatelessWidget {
         Locale('ja', 'JP'),
         Locale('en', 'US'),
       ],
-      routeInformationProvider: router.routeInformationProvider,
-      routeInformationParser: router.routeInformationParser,
-      routerDelegate: router.routerDelegate,
+      routerConfig: router,
     );
   }
 }
