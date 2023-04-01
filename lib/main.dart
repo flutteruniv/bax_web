@@ -11,7 +11,6 @@ import 'router.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
-
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await FirebaseAnalytics.instance.logEvent(
     name: 'app_start',
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: ThemeData(
-        textTheme: GoogleFonts.sawarabiGothicTextTheme(),
+        textTheme: GoogleFonts.notoSansTextTheme(),
         primaryColor: Colors.black,
         colorScheme: Theme.of(context).colorScheme.copyWith(
               primary: Colors.black,

@@ -4,36 +4,85 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rive/rive.dart';
 
-class LandingPage extends StatelessWidget {
+class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
 
   @override
+  State<LandingPage> createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
+  @override
   Widget build(BuildContext context) {
     final items = [
-      const SizedBox(
-        height: 400,
-        child: RiveAnimation.asset(
-          'assets/logo.riv',
+      SizedBox(
+        height: 240,
+        child: GestureDetector(
+          onTap: () {
+            setState(() {});
+          },
+          child: RiveAnimation.asset(
+            'assets/logo.riv',
+            key: UniqueKey(),
+          ),
         ),
+      ),
+      Container(
+        color: Colors.black,
+        height: 120,
+        child: const FittedBox(
+          child: Text(
+            'BAX',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+              fontSize: 100,
+            ),
+          ),
+        ),
+      ),
+      const SizedBox(
+        height: 200,
+      ),
+      Image.asset('assets/map.png'),
+      const Text(
+        '爆速Wi-Fiを探せ。',
+        style: TextStyle(
+          height: 1,
+          fontWeight: FontWeight.w900,
+          fontSize: 60,
+        ),
+      ),
+      const SizedBox(height: 16),
+      const Text(
+        'BAXは爆速Wi-Fiをみんなで探し、共有するアプリです。',
+        style: TextStyle(
+          fontWeight: FontWeight.w900,
+          fontSize: 20,
+        ),
+      ),
+      const SizedBox(
+        height: 200,
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 16),
+        child: Image.asset('assets/measurement.png'),
       ),
       const Text(
-        'Search for Speed',
-        textAlign: TextAlign.center,
+        '計測でBAXが貯まる。',
         style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 40,
+          height: 1,
+          fontWeight: FontWeight.w900,
+          fontSize: 60,
         ),
       ),
-      const SizedBox(
-        height: 1200,
-      ),
-      const Center(
-        child: Text(
-          'There is more to come.',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-          ),
+      const SizedBox(height: 16),
+      const Text(
+        'Wi-Fiを計測してBAXを貯めよう。BAXはギフト券に交換できます。',
+        style: TextStyle(
+          fontWeight: FontWeight.w900,
+          fontSize: 20,
         ),
       ),
       const SizedBox(
