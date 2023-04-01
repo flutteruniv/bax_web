@@ -70,7 +70,7 @@ class _LandingPageState extends State<LandingPage> {
         child: Image.asset('assets/measurement.png'),
       ),
       const Text(
-        '計測でBAXが貯まる。',
+        '計測でBAXを貯めろ。',
         style: TextStyle(
           height: 1,
           fontWeight: FontWeight.w900,
