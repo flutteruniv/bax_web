@@ -88,6 +88,25 @@ class _LandingPageState extends State<LandingPage> {
       const SizedBox(
         height: 240,
       ),
+      const Text(
+        '新機能が続々リリース',
+        style: TextStyle(
+          height: 1,
+          fontWeight: FontWeight.w900,
+          fontSize: 60,
+        ),
+      ),
+      const SizedBox(height: 16),
+      const Text(
+        '施設の詳細情報や、絞り込み検索など、アップデートにご期待ください。',
+        style: TextStyle(
+          fontWeight: FontWeight.w900,
+          fontSize: 20,
+        ),
+      ),
+      const SizedBox(
+        height: 240,
+      ),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
