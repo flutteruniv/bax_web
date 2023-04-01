@@ -89,7 +89,7 @@ class _LandingPageState extends State<LandingPage> {
         height: 240,
       ),
       const Text(
-        '新機能が続々リリース',
+        '新機能が続々と解放',
         style: TextStyle(
           height: 1,
           fontWeight: FontWeight.w900,
@@ -98,7 +98,7 @@ class _LandingPageState extends State<LandingPage> {
       ),
       const SizedBox(height: 16),
       const Text(
-        '施設の詳細情報や、絞り込み検索など、アップデートにご期待ください。',
+        '施設の詳細情報や、絞り込み検索などアップデートにご期待ください。',
         style: TextStyle(
           fontWeight: FontWeight.w900,
           fontSize: 20,
