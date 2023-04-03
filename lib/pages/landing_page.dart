@@ -1,8 +1,11 @@
 import 'package:bax_web/pages/privacy_policy_page.dart';
 import 'package:bax_web/pages/terms_of_service_page.dart';
+import 'package:bax_web/urls.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rive/rive.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -102,6 +105,62 @@ class _LandingPageState extends State<LandingPage> {
         style: TextStyle(
           fontWeight: FontWeight.w900,
           fontSize: 20,
+        ),
+      ),
+      const SizedBox(
+        height: 240,
+      ),
+      SizedBox(
+        height: 240,
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      launchUrlString(appStoreUrl);
+                    },
+                    child: SvgPicture.asset(
+                      'assets/app_store.svg',
+                      height: 120,
+                    ),
+                  ),
+                  const Text(
+                    'iOS',
+                    style: TextStyle(
+                      height: 1,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Column(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      launchUrlString(playStoreUrl);
+                    },
+                    child: SvgPicture.asset(
+                      'assets/play_store.svg',
+                      height: 120,
+                    ),
+                  ),
+                  const Text(
+                    'Android',
+                    style: TextStyle(
+                      height: 1,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
       const SizedBox(
